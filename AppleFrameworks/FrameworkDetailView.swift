@@ -10,13 +10,15 @@ import SwiftUI
 struct FrameworkDetailView: View {
     var framework: Framework
     
+    @Environment(\.dismiss) var dismissDetailView
+    
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 
                 Button {
-                    
+                    dismissDetailView()
                 } label: {
                     Image(systemName: "xmark")
                         .foregroundColor(Color(.label))
