@@ -12,7 +12,7 @@ struct AFButton: View {
     
     var body: some View {
         Text(title)
-            .font(.title2.weight(.semibold))
+            .font(.title3.weight(.semibold))
             .frame(width: 280, height: 50)
             .background(.red)
             .foregroundColor(.white)
