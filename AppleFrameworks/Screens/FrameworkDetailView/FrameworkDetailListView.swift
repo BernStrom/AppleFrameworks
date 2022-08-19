@@ -23,12 +23,16 @@ struct FrameworkDetailListView: View {
             Button {
                 isShowingSafariView = true
             } label: {
-                AFButton(title: "Learn More")
+                Label("Learn More", systemImage: "book.fill")
             }
+            .buttonStyle(.bordered)
+            .controlSize(.large)
+            .buttonBorderShape(.roundedRectangle(radius: 15))
+            .tint(.green)
             .padding(.bottom, 60)
         }
         .fullScreenCover(isPresented: $isShowingSafariView) {
-            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com/notfound")!)
                 .ignoresSafeArea()
         }
     }
