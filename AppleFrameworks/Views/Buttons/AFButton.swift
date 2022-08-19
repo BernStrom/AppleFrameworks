@@ -16,7 +16,7 @@ struct AFButton: View {
             .frame(width: 280, height: 50)
             .background(.red)
             .foregroundColor(.white)
-            .cornerRadius(10)
+            .cornerRadius(15)
     }
 }
 
