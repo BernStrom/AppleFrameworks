@@ -10,6 +10,7 @@ import SwiftUI
 struct FrameworkDetailView: View {
     var framework: Framework
     
+    @State private var isShowingSafariView = false
     @Environment(\.dismiss) var dismissDetailView
     
     var body: some View {
@@ -38,10 +39,14 @@ struct FrameworkDetailView: View {
             Spacer()
             
             Button {
-                
+                isShowingSafariView = true
             } label: {
                 AFButton(title: "Learn More")
             }
+        }
+        .fullScreenCover(isPresented: $isShowingSafariView) {
+            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+                .ignoresSafeArea()
         }
     }
 }
