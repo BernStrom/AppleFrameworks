@@ -1,5 +1,5 @@
 //
-//  FrameworkDetailView.swift
+//  FrameworkDetailGridView.swift
 //  AppleFrameworks
 //
 //  Created by Bern N on 8/18/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FrameworkDetailView: View {
+struct FrameworkDetailGridView: View {
     var framework: Framework
     @State private var isShowingSafariView = false
     
@@ -37,9 +37,9 @@ struct FrameworkDetailView: View {
 }
 
 
-struct FrameworkDetailView_Previews: PreviewProvider {
+struct FrameworkDetailGridView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailView(framework: MockData.sampleFramework)
+        FrameworkDetailGridView(framework: MockData.sampleFramework)
             .preferredColorScheme(.dark)
     }
 }
