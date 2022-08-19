@@ -18,6 +18,10 @@
 		2D413E8528AE451000F24094 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D413E8428AE451000F24094 /* SafariView.swift */; };
 		2D6E458028AF360C008DDBD8 /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E457F28AF360C008DDBD8 /* FrameworkTitleView.swift */; };
 		2D6E458228AF3713008DDBD8 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E458128AF3713008DDBD8 /* XDismissButton.swift */; };
+		2D6E458C28AF43E2008DDBD8 /* FrameworkTitleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E458B28AF43E2008DDBD8 /* FrameworkTitleListView.swift */; };
+		2D6E458F28AF4496008DDBD8 /* FrameworkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E458E28AF4496008DDBD8 /* FrameworkListView.swift */; };
+		2D6E459128AF4950008DDBD8 /* FrameworkDetailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E459028AF4950008DDBD8 /* FrameworkDetailListView.swift */; };
+		2D6E459428AF51CA008DDBD8 /* FrameworkHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E459328AF51CA008DDBD8 /* FrameworkHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		2D413E8428AE451000F24094 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		2D6E457F28AF360C008DDBD8 /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
 		2D6E458128AF3713008DDBD8 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		2D6E458B28AF43E2008DDBD8 /* FrameworkTitleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleListView.swift; sourceTree = "<group>"; };
+		2D6E458E28AF4496008DDBD8 /* FrameworkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListView.swift; sourceTree = "<group>"; };
+		2D6E459028AF4950008DDBD8 /* FrameworkDetailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailListView.swift; sourceTree = "<group>"; };
+		2D6E459328AF51CA008DDBD8 /* FrameworkHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 		2D6E458328AF3C50008DDBD8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2D6E459228AF519E008DDBD8 /* FrameworkHomeView */,
+				2D6E458D28AF4465008DDBD8 /* FrameworkListView */,
 				2D6E458428AF3DAC008DDBD8 /* FrameworkGridView */,
 				2D6E458528AF3DBB008DDBD8 /* FrameworkDetailView */,
 			);
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2D413E7E28ADCF4500F24094 /* FrameworkDetailView.swift */,
+				2D6E459028AF4950008DDBD8 /* FrameworkDetailListView.swift */,
 			);
 			path = FrameworkDetailView;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6E457F28AF360C008DDBD8 /* FrameworkTitleView.swift */,
+				2D6E458B28AF43E2008DDBD8 /* FrameworkTitleListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +162,22 @@
 				2D413E8428AE451000F24094 /* SafariView.swift */,
 			);
 			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		2D6E458D28AF4465008DDBD8 /* FrameworkListView */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E458E28AF4496008DDBD8 /* FrameworkListView.swift */,
+			);
+			path = FrameworkListView;
+			sourceTree = "<group>";
+		};
+		2D6E459228AF519E008DDBD8 /* FrameworkHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E459328AF51CA008DDBD8 /* FrameworkHomeView.swift */,
+			);
+			path = FrameworkHomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,11 +251,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D413E7F28ADCF4500F24094 /* FrameworkDetailView.swift in Sources */,
+				2D6E458F28AF4496008DDBD8 /* FrameworkListView.swift in Sources */,
 				2D3BD61F28AD9F3B0023107B /* FrameworkGridView.swift in Sources */,
 				2D6E458228AF3713008DDBD8 /* XDismissButton.swift in Sources */,
 				2D3BD62B28ADA0450023107B /* Framework.swift in Sources */,
 				2D413E8128ADD2DB00F24094 /* AFButton.swift in Sources */,
 				2D3BD61D28AD9F3B0023107B /* AppleFrameworksApp.swift in Sources */,
+				2D6E459428AF51CA008DDBD8 /* FrameworkHomeView.swift in Sources */,
+				2D6E458C28AF43E2008DDBD8 /* FrameworkTitleListView.swift in Sources */,
+				2D6E459128AF4950008DDBD8 /* FrameworkDetailListView.swift in Sources */,
 				2D413E8328AE06FD00F24094 /* FrameworkGridViewModel.swift in Sources */,
 				2D6E458028AF360C008DDBD8 /* FrameworkTitleView.swift in Sources */,
 				2D413E8528AE451000F24094 /* SafariView.swift in Sources */,

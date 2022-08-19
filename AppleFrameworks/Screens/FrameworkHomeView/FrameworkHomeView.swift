@@ -9,12 +9,25 @@ import SwiftUI
 
 struct FrameworkHomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            FrameworkGridView()
+                .tabItem {
+                    Image(systemName: "square.grid.3x3")
+                    Text("Grid")
+                }
+            
+            FrameworkListView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("List")
+                }
+        }
     }
 }
 
 struct FrameworkHomeView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkHomeView()
+            .preferredColorScheme(.dark)
     }
 }
