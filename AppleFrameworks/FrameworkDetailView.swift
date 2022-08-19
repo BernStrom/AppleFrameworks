@@ -9,25 +9,11 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     var framework: Framework
-    
     @State private var isShowingSafariView = false
-    @Environment(\.dismiss) var dismissDetailView
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                
-                Button {
-                    dismissDetailView()
-                } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(Color(.label))
-                        .imageScale(.large)
-                        .frame(width: 44, height: 44)
-                }
-            }
-            .padding()
+            XDismissButton()
             
             Spacer()
             
