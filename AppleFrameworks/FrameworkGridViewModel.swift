@@ -11,8 +11,8 @@ final class FrameworkGridViewModel: ObservableObject {
     @Published var isShowingDetailView = false
     
     var selectedFramework: Framework? {
-        didSet {
-            isShowingDetailView = true
-        }
+        didSet { isShowingDetailView = true }
     }
+    
+    let columns = Array(repeating: GridItem(.flexible()), count: 3)
 }
