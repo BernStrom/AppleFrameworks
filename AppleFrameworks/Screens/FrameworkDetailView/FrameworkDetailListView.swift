@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct FrameworkDetailListView: View {
+    var framework: Framework
+    @State private var isShowingSafariView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            FrameworkTitleView(framework: framework)
+            
+            Text(framework.description)
+                .padding()
+            
+            Spacer()
+            
+            Button {
+                isShowingSafariView = true
+            } label: {
+                AFButton(title: "Learn More")
+            }
+            .padding(.bottom, 60)
+        }
+        .fullScreenCover(isPresented: $isShowingSafariView) {
+            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+                .ignoresSafeArea()
+        }
     }
 }
 
+
 struct FrameworkDetailListView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailListView()
+        FrameworkDetailListView(framework: MockData.sampleFramework)
     }
 }

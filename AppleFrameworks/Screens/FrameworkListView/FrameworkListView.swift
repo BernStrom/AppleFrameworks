@@ -9,12 +9,23 @@ import SwiftUI
 
 struct FrameworkListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(MockData.frameworks) { framework in
+                    NavigationLink(destination: FrameworkDetailListView(framework: framework)) {
+                        FrameworkTitleListView(framework: framework)
+                    }
+                }
+            }
+            .navigationTitle(" Frameworks")
+        }
     }
 }
+
 
 struct FrameworkListView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkListView()
+            .preferredColorScheme(.dark)
     }
 }
