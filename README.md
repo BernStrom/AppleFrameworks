@@ -29,10 +29,12 @@ For user features, the app contains a dual layout option; **Grid** & **List** - 
 ## App preview
 
 <p>
-    <img src="https://user-images.githubusercontent.com/65307853/185733317-b26973bb-0e24-478c-92d4-ffcdfd5d72d4.png" alt="AppleFrameworks Grid layout" width="240">
-    <img src="https://user-images.githubusercontent.com/65307853/185733372-4491f0e8-df33-4311-a76e-cfbdab742536.png" alt="AppleFrameworks List layout" width="240">
-    <img src="https://user-images.githubusercontent.com/65307853/185733417-6aac2de0-4ea8-48dd-98e6-1fa400768d4e.png" alt="AppleFrameworks WeatherKit details screen" width="240">
-    <img src="https://user-images.githubusercontent.com/65307853/185733450-7351b4d6-35ca-446a-a60a-7538e4532103.png" alt="AppleFrameworks MapKit details screen" width="240">
+    <img src="https://user-images.githubusercontent.com/65307853/185733317-b26973bb-0e24-478c-92d4-ffcdfd5d72d4.png" alt="AppleFrameworks Grid layout" width="250">
+    <img src="https://user-images.githubusercontent.com/65307853/185733372-4491f0e8-df33-4311-a76e-cfbdab742536.png" alt="AppleFrameworks List layout" width="250">
+    <img src="https://user-images.githubusercontent.com/65307853/185734073-8dcd0195-03a6-4322-bc77-e0e44a06fc4f.png" alt="AppleFrameworks List layout Light Mode" width="250">
+    <img src="https://user-images.githubusercontent.com/65307853/185733417-6aac2de0-4ea8-48dd-98e6-1fa400768d4e.png" alt="AppleFrameworks WeatherKit details screen" width="250">
+    <img src="https://user-images.githubusercontent.com/65307853/185733450-7351b4d6-35ca-446a-a60a-7538e4532103.png" alt="AppleFrameworks MapKit details screen" width="250">
+    <img src="https://user-images.githubusercontent.com/65307853/185734095-e6b00112-e24e-4e4a-ab87-da9ad177e381.png" alt="AppleFrameworks Passkeys details screen" width="250">
 </p>
 
 https://user-images.githubusercontent.com/65307853/185733522-38b004a0-e6f3-471a-88a7-590553cdf98f.mp4
