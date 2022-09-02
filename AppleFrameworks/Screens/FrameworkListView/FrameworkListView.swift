@@ -12,9 +12,10 @@ struct FrameworkListView: View {
         NavigationView {
             List {
                 ForEach(MockData.frameworks) { framework in
-                    NavigationLink(destination: FrameworkDetailListView(framework: framework)) {
-                        FrameworkTitleListView(framework: framework)
-                    }
+                    NavigationLink(
+                        destination: FrameworkDetailListView(viewModel: FrameworkDetailViewModel(framework: framework))) {
+                            FrameworkTitleListView(framework: framework)
+                        }
                 }
             }
             .navigationTitle(" Frameworks")

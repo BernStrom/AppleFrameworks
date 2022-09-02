@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct FrameworkDetailGridView: View {
-    var framework: Framework
-    @State private var isShowingSafariView = false
+    @ObservedObject var viewModel: FrameworkDetailViewModel
     
     var body: some View {
         VStack {
             XDismissButton()
             
-            FrameworkTitleView(framework: framework)
+            FrameworkTitleView(framework: viewModel.framework)
             
-            Text(framework.description)
+            Text(viewModel.framework.description)
                 .padding()
             
             Spacer()
             
             Button {
-                isShowingSafariView = true
+                viewModel.isShowingSafariView = true
             } label: {
                 Label("Learn More", systemImage: "book.fill")
             }
@@ -33,8 +32,8 @@ struct FrameworkDetailGridView: View {
             .tint(.green)
             .padding(.bottom, 60)
         }
-        .fullScreenCover(isPresented: $isShowingSafariView) {
-            SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com/notfound")!)
+        .fullScreenCover(isPresented: $viewModel.isShowingSafariView) {
+            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!)
                 .ignoresSafeArea()
         }
     }
@@ -43,7 +42,7 @@ struct FrameworkDetailGridView: View {
 
 struct FrameworkDetailGridView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailGridView(framework: MockData.sampleFramework)
+        FrameworkDetailGridView(viewModel: FrameworkDetailViewModel(framework: MockData.sampleFramework))
             .preferredColorScheme(.dark)
     }
 }
