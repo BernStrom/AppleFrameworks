@@ -9,7 +9,6 @@ import Foundation
 
 final class FrameworkDetailViewModel: ObservableObject {
     let framework: Framework
-    @Published var isShowingSafariView = false
     
     init(framework: Framework) {
         self.framework = framework
