@@ -12,14 +12,12 @@ struct FrameworkHomeView: View {
         TabView {
             FrameworkGridView()
                 .tabItem {
-                    Image(systemName: "square.grid.3x3")
-                    Text("Grid")
+                    Label("Grid", systemImage: "square.grid.3x3")
                 }
             
             FrameworkListView()
                 .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("List")
+                    Label("List", systemImage: "list.bullet")
                 }
         }
     }
