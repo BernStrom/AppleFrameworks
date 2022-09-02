@@ -24,11 +24,7 @@ struct FrameworkDetailGridView: View {
             Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!) {
                 Label("Learn More", systemImage: "book.fill")
             }
-            .buttonStyle(.bordered)
-            .controlSize(.large)
-            .buttonBorderShape(.roundedRectangle(radius: 15))
-            .tint(.green)
-            .padding(.bottom, 60)
+            .modifier(StandardLinkStyle())
         }
     }
 }

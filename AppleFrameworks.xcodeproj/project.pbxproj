@@ -22,6 +22,7 @@
 		2D6E459128AF4950008DDBD8 /* FrameworkDetailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E459028AF4950008DDBD8 /* FrameworkDetailListView.swift */; };
 		2D6E459428AF51CA008DDBD8 /* FrameworkHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E459328AF51CA008DDBD8 /* FrameworkHomeView.swift */; };
 		2D9909DD28C283AA006A86A4 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9909DC28C283AA006A86A4 /* FrameworkDetailViewModel.swift */; };
+		2D9909DF28C29B45006A86A4 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9909DE28C29B45006A86A4 /* CustomModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2D6E459028AF4950008DDBD8 /* FrameworkDetailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailListView.swift; sourceTree = "<group>"; };
 		2D6E459328AF51CA008DDBD8 /* FrameworkHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkHomeView.swift; sourceTree = "<group>"; };
 		2D9909DC28C283AA006A86A4 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
+		2D9909DE28C29B45006A86A4 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				2D6E458928AF3ECD008DDBD8 /* View */,
 				2D6E458828AF3E85008DDBD8 /* Buttons */,
+				2D9909DE28C29B45006A86A4 /* CustomModifiers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				2D3BD61F28AD9F3B0023107B /* FrameworkGridView.swift in Sources */,
 				2D6E458228AF3713008DDBD8 /* XDismissButton.swift in Sources */,
 				2D9909DD28C283AA006A86A4 /* FrameworkDetailViewModel.swift in Sources */,
+				2D9909DF28C29B45006A86A4 /* CustomModifiers.swift in Sources */,
 				2D3BD62B28ADA0450023107B /* Framework.swift in Sources */,
 				2D3BD61D28AD9F3B0023107B /* AppleFrameworksApp.swift in Sources */,
 				2D6E459428AF51CA008DDBD8 /* FrameworkHomeView.swift in Sources */,
