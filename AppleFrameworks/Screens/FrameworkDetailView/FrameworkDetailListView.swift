@@ -30,6 +30,6 @@ struct FrameworkDetailListView: View {
 
 struct FrameworkDetailListView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailListView(viewModel: FrameworkDetailViewModel(framework: MockData.sampleFramework))
+        FrameworkDetailListView(viewModel: FrameworkDetailViewModel(framework: MockData.frameworks[1]))
     }
 }

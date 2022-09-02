@@ -32,7 +32,7 @@ struct FrameworkDetailGridView: View {
 
 struct FrameworkDetailGridView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailGridView(viewModel: FrameworkDetailViewModel(framework: MockData.sampleFramework))
+        FrameworkDetailGridView(viewModel: FrameworkDetailViewModel(framework: MockData.frameworks[1]))
             .preferredColorScheme(.dark)
     }
 }

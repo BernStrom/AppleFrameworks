@@ -16,11 +16,11 @@ struct Framework: Identifiable {
 }
 
 struct MockData {
-    static let sampleFramework = Framework(
-        name: "ARKit",
-        imageName: "arkit",
-        urlString: "https://developer.apple.com/augmented-reality/arkit",
-        description: "ARKit 6 introduces 4K video, so you can capture stunning high-resolution videos of AR experiences — perfect for professional video editing, film production, social media apps, and more.\n\nVideo and capture capabilities are expanded with support for HDR video and high-resolution background image capture. ARKit 6 also brings Location Anchors to new cities, such as Montreal, Sydney, Singapore, and Tokyo, and it features improvements to Motion Capture."
+    static let frameworkNotFound = Framework(
+        name: "Framework Not Found",
+        imageName: "no-image",
+        urlString: "www.apple.com/notfound",
+        description: "Oops, looks like something went wrong and we couldn't get any details on the framework.\n\nPlease try again later or contact support."
     )
     
     static let frameworks = [
