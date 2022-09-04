@@ -26,7 +26,77 @@ For user features, the app contains a dual layout option; **Grid** & **List** - 
 
 * MVVM Architecture
 * iOS 15+ button system w/ SF Symbols
-* Dual layout options with TabView - *users can switch freely between a Grid or List layout*
+* Dual layout options with `TabView` - *users can switch freely between a Grid or List layout*
+* UIKit integration of `SFSafariViewController` - *this was refactored to use SwiftUI's built-in `Link`*
+<br />
+#### - More info on UIKit's `SFSafariViewController` to SwiftUI's native `Link`
+
+Since the release of iOS 14, developers are able to make use of SwiftUI's native `Link` view for implementing URL link redirection, such as tapping on a button in their app and automatically switching over to Safari to open the link. However, it's important to note that the behaviour of how Safari opens the URL link between UIKit's `SFSafariViewController` and SwiftUI's native `Link` are different.
+
+With UIKit's `SFSafariViewController`, Safari will open the URL link by displaying an in-app browser without leaving the app itself. In most cases, if you want users to briefly access a website without leaving your app, for example redirecting them to a page where they need login into their account with option to use a third-party authentication provider like Google, then this is mostly fine. However, if you intent to displaying an exact replica of a Safari browser along with all its functionality like the app itself, this is actually discouraged.
+
+According to Apple's [recommendation in the iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/components/content/web-views/):
+> Avoid using a web view to build a web browser. Using a web view to let people briefly access a website without leaving the context of your app is fine, but Safari is the primary way people browse the web. Attempting to replicate the functionality of Safari in your app is unnecessary and discouraged.
+
+<br />
+
+There isn't a lot of explanation as to why Apple doesn't recommend the above practices, but here are the reasons why I decided to make the switch to using SwiftUI's native `Link`:
+* With the upcoming release of iOS 16, I decided this switch make sense as all apps deployment should at least support two versions lower than the latest public release version. This brings us to iOS 14 being the version that's backwards-compatible and `Link` is available with SwiftUI apps deployed from version iOS 14+. Although this reasoning is a moot point since the deployment target is set to iOS 15+, keep in mind that one of the core purpose of this project is to simulate an iOS app development in a professional environment, such as developing a public-facing/ commerical app for a company.
+<br />
+* As the nature of this app being informational, using SwiftUI's `Link` in this context is more suited to the purpose of this app, as opening the URL link of the framework homepage in the Safari app itself allow users to make use of the full functionality of the Safari browser, such as bookmarking the framework's homepage, diving deeper into the framework's documentation, keeping multiple framework browser tabs opened, etc. All these are not possible with the previous UIKit integration of `SFSafariViewController`.
+
+<!-- ## Source code comparison
+##### - With UIKit's integration of `SFSafariViewController`:
+```
+import SwiftUI
+import SafariServices
+
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        SFSafariViewController(url: url)
+    }
+    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) { }
+}
+```
+```
+import SwiftUI
+
+struct FrameworkDetailGridView: View {
+    @ObservedObject var viewModel: FrameworkDetailViewModel
+    
+    var body: some View {
+        VStack { 
+            ... 
+        }
+        .fullScreenCover(isPresented: $viewModel.isShowingSafariView) {
+            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!)
+                .ignoresSafeArea()
+        }
+    }
+}
+```
+<br />
+##### - With SwiftUI's native `Link`:
+```
+import SwiftUI
+
+struct FrameworkDetailGridView: View {
+    @ObservedObject var viewModel: FrameworkDetailViewModel
+    
+    var body: some View {
+        VStack { 
+            ...
+
+            Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!) {
+                Label("Learn More", systemImage: "book.fill")
+            }
+        }
+    }
+}
+``` -->
 
 ## App preview
 
@@ -45,7 +115,7 @@ https://user-images.githubusercontent.com/65307853/185733522-38b004a0-e6f3-471a-
 
 Apple Frameworks is written using Xcode 13.2 and Swift 5.5 on the SwiftUI framework. To try it out, you can clone this project and build it immediately by opening `AppleFrameworks.xcodeproj`.
 
-As far as I know the app feature is complete, but there are always the likelihood of errors popping up once in a while due to a number of reasons; code deprecation, breaking changes to new SwiftUI version releases, etc. 
+As far as I know the app feature is complete, but there are always the likelihood of errors popping up once in a while due to a number of reasons; code deprecation, breaking changes due to new SwiftUI version releases, etc. 
 
 If you hit any problems, either building or running the app, please let me know.
 
