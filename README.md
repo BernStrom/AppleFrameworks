@@ -110,7 +110,7 @@ struct FrameworkDetailGridView: View {
     <img src="https://user-images.githubusercontent.com/65307853/185734095-e6b00112-e24e-4e4a-ab87-da9ad177e381.png" alt="Apple Frameworks Passkeys details screen" width="250">
 </p>
 
-https://user-images.githubusercontent.com/65307853/185733522-38b004a0-e6f3-471a-88a7-590553cdf98f.mp4
+https://user-images.githubusercontent.com/65307853/188315726-1660b729-e9c2-4954-a5a7-88f064dee8dc.mp4
 
 ## Trying it yourself
 
