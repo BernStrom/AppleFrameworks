@@ -24,7 +24,7 @@ For user features, the app contains a dual layout option; **Grid** & **List** - 
 
 #### - Key features & technologies
 
-* MVVM Architecture
+* MVVM Design Pattern
 * iOS 15+ button system w/ SF Symbols
 * Dual layout options with `TabView` - *users can switch freely between a Grid or List layout*
 * UIKit integration of `SFSafariViewController` - *this was refactored to use SwiftUI's built-in `Link`*
