@@ -49,71 +49,12 @@ There isn't a lot of explanation as to why Apple doesn't recommend the above pra
 * As the nature of this app being informational, using SwiftUI's `Link` in this context is more suited to the purpose of this app, as opening the URL link of the framework homepage in the Safari app itself allow users to make use of the full functionality of the Safari browser, such as bookmarking the framework's homepage, diving deeper into the framework's documentation, keeping multiple framework browser tabs opened, etc. All these are not possible with the previous UIKit integration of `SFSafariViewController`.
 </details>
 
-<!-- ## Source code comparison
-##### - With UIKit's integration of `SFSafariViewController`:
-```
-import SwiftUI
-import SafariServices
-
-struct SafariView: UIViewControllerRepresentable {
-    let url: URL
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        SFSafariViewController(url: url)
-    }
-    
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) { }
-}
-```
-```
-import SwiftUI
-
-struct FrameworkDetailGridView: View {
-    @ObservedObject var viewModel: FrameworkDetailViewModel
-    
-    var body: some View {
-        VStack { 
-            ... 
-        }
-        .fullScreenCover(isPresented: $viewModel.isShowingSafariView) {
-            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!)
-                .ignoresSafeArea()
-        }
-    }
-}
-```
-<br />
-##### - With SwiftUI's native `Link`:
-```
-import SwiftUI
-
-struct FrameworkDetailGridView: View {
-    @ObservedObject var viewModel: FrameworkDetailViewModel
-    
-    var body: some View {
-        VStack { 
-            ...
-
-            Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com/notfound")!) {
-                Label("Learn More", systemImage: "book.fill")
-            }
-        }
-    }
-}
-``` -->
-
 ## App preview
 
-<p>
-    <img src="https://user-images.githubusercontent.com/65307853/185733317-b26973bb-0e24-478c-92d4-ffcdfd5d72d4.png" alt="Apple Frameworks Grid layout" width="250">
-    <img src="https://user-images.githubusercontent.com/65307853/185733372-4491f0e8-df33-4311-a76e-cfbdab742536.png" alt="Apple Frameworks List layout" width="250">
-    <img src="https://user-images.githubusercontent.com/65307853/185734073-8dcd0195-03a6-4322-bc77-e0e44a06fc4f.png" alt="Apple Frameworks List layout Light Mode" width="250">
-    <img src="https://user-images.githubusercontent.com/65307853/185733417-6aac2de0-4ea8-48dd-98e6-1fa400768d4e.png" alt="Apple Frameworks WeatherKit details screen" width="250">
-    <img src="https://user-images.githubusercontent.com/65307853/185733450-7351b4d6-35ca-446a-a60a-7538e4532103.png" alt="Apple Frameworks MapKit details screen" width="250">
-    <img src="https://user-images.githubusercontent.com/65307853/185734095-e6b00112-e24e-4e4a-ab87-da9ad177e381.png" alt="Apple Frameworks Passkeys details screen" width="250">
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/65307853/193436987-fe29a564-ac40-4126-bd18-a9408f31aeaa.png" alt="App screenshots">
+    <video src="https://user-images.githubusercontent.com/65307853/188315726-1660b729-e9c2-4954-a5a7-88f064dee8dc.mp4"></video>
 </p>
-
-https://user-images.githubusercontent.com/65307853/188315726-1660b729-e9c2-4954-a5a7-88f064dee8dc.mp4
 
 ## Trying it yourself
 
